@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   root to: 'vendors#index'
 
   resources :vendors, only: [:index]
+
+  # singleton
+  resource :csvs, only: [:show]
 end

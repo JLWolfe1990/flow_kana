@@ -1,8 +1,13 @@
-<ul class="nav nav-tabs nav-fill">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">SQL</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#" aria-disabled="true">CSV Party</a>
-  </li>
-</ul>
+<div class="row">
+  <div class="col-sm">
+    <ul class="nav nav-tabs nav-fill" style="margin-top: 50px">
+      <li class="nav-item">
+        <a class="nav-link <%= "active" if controller_name == 'vendors' %>" href="<%= vendors_path %>">SQL</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link <%= "active" if controller_name == 'csvs' %>" href="<%= csvs_path %>" %>CSV Party</a>
+      </li>
+    </ul>
+  </div>
+</div>
