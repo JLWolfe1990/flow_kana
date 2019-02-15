@@ -1,5 +1,5 @@
 class VendorsController < ApplicationController
   def index
-    @vendors = Vendor.all
+    @vendor_products = Vendor.grouped_counts
   end
 end

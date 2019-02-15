@@ -3,7 +3,7 @@ def create_products(vendor, arr)
 end
 
 create_products(Vendor.create(name: 'Hmbldt'), ['Sleep Pen', 'Relax Pen'])
-create_products(Vendor.create(name: 'Valhalla'), ['CBD Gummies', 'Indica Gummies'])
+create_products(Vendor.create(name: 'Valhalla'), ['CBD Gummies', 'Indica Gummies', 'Sativa Gummies'])
 
 Vendor.create(name: 'Kiva')
 

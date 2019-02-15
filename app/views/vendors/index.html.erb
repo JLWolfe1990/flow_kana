@@ -2,6 +2,20 @@
 
 <div class="row vendors-index">
   <div class="col-sm">
+    <table class="table">
+      <thead>
+        <th>vendor</th>
+        <th>product_count</th>
+      </thead>
 
+      <tbody>
+        <% @vendor_products.each do |v_p| %>
+          <tr>
+            <td><%= v_p["name"] %></td>
+            <td><%= v_p["count"] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>
