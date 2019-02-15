@@ -3,9 +3,5 @@ Rails.application.routes.draw do
 
   root to: 'vendors#index'
 
-  resources :vendors, only: [:index, :create, :destroy] do
-    resources :products, only: [:index, :create]
-  end
-
-  resources :products, only: :destroy
+  resources :vendors, only: [:index]
 end
