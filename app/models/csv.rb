@@ -6,12 +6,14 @@ class Csv < ActiveRecord::Base
     result = []
 
     split_arr = input.split(',')
-    group_size = input.length % col_count
 
-    (0...8).each do |col_num|
+    row_mod = split_arr.length % col_count
+    row_num =  (split_arr.length / col_count.to_f).ceil
+
+    (0...col_count).each do |col_num|
       result << []
-      (0...3).each do |row_num|
-        if col_num >= 3 && result[col_num].length == 2
+      (0...row_num).each do
+        if col_num >= row_mod && row_mod != 0 && result[col_num].length == row_num - 1
           result[col_num] << ""
         else
           result[col_num] << split_arr.shift
