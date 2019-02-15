@@ -5,6 +5,5 @@ Rails.application.routes.draw do
 
   resources :vendors, only: [:index]
 
-  # singleton
-  resource :csvs, only: [:show]
+  resources :csvs, only: [:index, :create]
 end

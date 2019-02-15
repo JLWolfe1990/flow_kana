@@ -1,0 +1,16 @@
+<%= render partial: 'layouts/tabs' %>
+
+<div class="row">
+  <div class="col-sm">
+    <%= form_tag csvs_path, method: 'post' do %>
+      <%= label_tag 'CSV Input String' %>
+      <%= text_field_tag :input %>
+
+      <%= label_tag 'Number of Columns' %>
+      <% select_arr = (1..10).inject([]) { |mem, index| mem << [index, index] } %>
+      <%= select_tag(:col_count, options_for_select(select_arr)) %>
+
+      <%= submit_tag 'Create' %>
+    <% end %>
+  </div>
+</div>
